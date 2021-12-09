@@ -3,12 +3,12 @@ import scala.collection.mutable.ListBuffer
 
 trait Queue {
 
-  def enqueue(elementToBePushed : Int)
+  def enqueue(pushedElement : Int)
 
-  def dequeue(queue: ListBuffer[Int]) : Int ={
+  def dequeue(q: ListBuffer[Int]) : Int ={
 
-    val removedElement = queue(0)
-    queue.remove(0)
+    val removedElement = q(0)
+    q.remove(0)
     removedElement
   }
 

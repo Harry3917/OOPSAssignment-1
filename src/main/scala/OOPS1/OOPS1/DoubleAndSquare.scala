@@ -1,25 +1,22 @@
 package OOPS1
 import scala.collection.mutable.ListBuffer
 
+class DoubleQueue(q : ListBuffer[Int]) extends Queue {
 
-//To insert double of an element
-class DoubleQueue(queue : ListBuffer[Int]) extends Queue {
+  override def enqueue(pushedElement: Int): Unit = {
 
-  override def enqueue(elementToBePushed: Int): Unit = {
-
-    queue += (elementToBePushed * 2)
+    q += (pushedElement * 2)
   }
 
 }
 
-//To insert Square of an element
-class SquareQueue(queue: ListBuffer[Int]) extends Queue {
+class SquareQueue(q: ListBuffer[Int]) extends Queue {
 
-  override def enqueue(elementToBePushed: Int): Unit = {
+  override def enqueue(pushedElement: Int): Unit = {
 
-    queue += (elementToBePushed * elementToBePushed)
+    q += (pushedElement * pushedElement)
   }
 
-
-
 }
+
+
